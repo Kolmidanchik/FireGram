@@ -78,9 +78,9 @@ android {
     compileSdkVersion 33
     buildToolsVersion '33.0.1'
     ndkVersion "21.4.7075529"
-    namespace 'org.telegram.messenger'
+    namespace 'com.firegram.messenger'
 
-    defaultConfig.applicationId = APP_PACKAGE
+    defaultConfig.applicationId = 'com.firegram.messenger'
     defaultConfig.versionCode = Integer.parseInt(APP_VERSION_CODE)
 
     Properties localProperties = new Properties()
