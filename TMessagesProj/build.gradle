@@ -102,8 +102,8 @@ buildConfigField 'String', 'APP_HASH', System.getenv("APP_HASH") ?: '""'
         externalNativeBuild {
             cmake {
                 version '3.10.2'
-                arguments '-DANDROID_STL=c++_static', '-DANDROID_PLATFORM=android-21'
-            }
+                arguments '-DANDROID_STL=c++_static', '-DANDROID_PLATFORM=android-21', 
+            }'-DDISABLE_VOIP=ON'
         }
 
         javaCompileOptions {
