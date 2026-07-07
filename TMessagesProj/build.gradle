@@ -94,10 +94,8 @@ android {
         versionName APP_VERSION_NAME
 
         // Obtain your own keys at: https://core.telegram.org/api/obtaining_api_id
-        buildConfigField 'int', 'APP_ID', '35548999'
-buildConfigField 'String', 'APP_HASH', '"f330a5df954cf929236266daa40c5a3e"'
-buildConfigField 'String', 'AYU_VERSION', '"' + new Date().format("yyyyMMdd") + '"'
-
+        buildConfigField 'int', 'APP_ID', System.getenv("APP_ID") ?: '0'
+buildConfigField 'String', 'APP_HASH', System.getenv("APP_HASH") ?: '""'
         // Google Console: https://console.cloud.google.com/google/maps-apis/credentials
         resValue 'string', 'MAPS_V2_API', localProperties.getProperty("MAPS_V2_API")
 
